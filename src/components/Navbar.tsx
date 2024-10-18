@@ -27,8 +27,8 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black/80 backdrop-blur-sm">
-      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm">
+      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" className="text-xl sm:text-2xl font-bold text-white">Ink Masters</Link>
         <div className="hidden md:flex space-x-4">
           <NavLink href="/">Home</NavLink>
@@ -49,7 +49,7 @@ export default function Navbar() {
             exit="closed"
             variants={menuVariants}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-black flex flex-col items-center justify-center z-40 h-screen w-screen"
+            className="fixed inset-0 bg-black flex flex-col items-center justify-center z-40"
           >
             <NavLink href="/" onClick={toggleMenu}>Home</NavLink>
             <NavLink href="/about" onClick={toggleMenu}>About</NavLink>

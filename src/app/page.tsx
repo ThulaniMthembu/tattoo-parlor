@@ -35,7 +35,7 @@ export default function Home() {
 
   return (
     <div className="relative h-screen">
-      <AnimatePresence initial={false}>
+      <AnimatePresence initial={false} mode="wait">
         <motion.div
           key={currentIndex}
           initial={{ opacity: 0 }}
