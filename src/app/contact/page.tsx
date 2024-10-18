@@ -35,7 +35,7 @@ export default function Contact() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-xl sm:text-2xl font-semibold mb-4">Get in Touch</h2>
-          <p className="mb-6 text-sm sm:text-base">We'd love to hear from you. Feel free to reach out with any questions or to schedule an appointment.</p>
+          <p className="mb-6 text-sm sm:text-base">We&apos;d love to hear from you. Feel free to reach out with any questions or to schedule an appointment.</p>
           <div className="space-y-4">
             <div className="flex items-center">
               <MapPin className="mr-4 text-gray-600 flex-shrink-0" />
