@@ -49,13 +49,15 @@ export default function Navbar() {
             exit="closed"
             variants={menuVariants}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-black flex flex-col items-center justify-center z-40"
+            className="fixed inset-0 bg-black flex flex-col items-center justify-center z-40 h-screen w-screen"
           >
-            <NavLink href="/" onClick={toggleMenu}>Home</NavLink>
-            <NavLink href="/about" onClick={toggleMenu}>About</NavLink>
-            <NavLink href="/services" onClick={toggleMenu}>Services</NavLink>
-            <NavLink href="/gallery" onClick={toggleMenu}>Gallery</NavLink>
-            <NavLink href="/contact" onClick={toggleMenu}>Contact</NavLink>
+            <div className="flex flex-col items-center space-y-6">
+              <NavLink href="/" onClick={toggleMenu}>Home</NavLink>
+              <NavLink href="/about" onClick={toggleMenu}>About</NavLink>
+              <NavLink href="/services" onClick={toggleMenu}>Services</NavLink>
+              <NavLink href="/gallery" onClick={toggleMenu}>Gallery</NavLink>
+              <NavLink href="/contact" onClick={toggleMenu}>Contact</NavLink>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -65,7 +67,7 @@ export default function Navbar() {
 
 function NavLink({ href, children, onClick }: { href: string; children: React.ReactNode; onClick?: () => void }) {
   return (
-    <Link href={href} className="text-white hover:text-gray-300 transition-colors py-2 text-lg" onClick={onClick}>
+    <Link href={href} className="text-white hover:text-gray-300 transition-colors py-2 text-2xl" onClick={onClick}>
       {children}
     </Link>
   )
