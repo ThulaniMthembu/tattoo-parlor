@@ -34,8 +34,8 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="min-h-screen pt-0">
-      <div className="relative h-[calc(100vh-48px)]">
+    <main className="min-h-screen">
+      <div className="relative h-screen">
         <AnimatePresence initial={false} mode="wait">
           <motion.div
             key={currentIndex}
