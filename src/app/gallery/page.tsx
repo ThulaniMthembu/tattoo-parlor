@@ -22,8 +22,8 @@ export default function Gallery() {
 
   return (
     <div className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold mb-4 text-center">Our Gallery</h1>
-      <p className="text-xl text-center mb-8">Discover our portfolio of stunning tattoo artworks</p>
+      <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-center">Our Gallery</h1>
+      <p className="text-lg sm:text-xl text-center mb-8">Discover our portfolio of stunning tattoo artworks</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {galleryImages.map((image, index) => (
           <motion.div
@@ -51,14 +51,14 @@ export default function Gallery() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50"
+            className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-4"
             onClick={() => setSelectedImage(null)}
           >
             <motion.div
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.9 }}
-              className="relative"
+              className="relative max-w-full max-h-full"
             >
               <Image
                 src={selectedImage}
@@ -68,8 +68,11 @@ export default function Gallery() {
                 className="max-w-full max-h-[90vh] object-contain"
               />
               <button
-                className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors"
-                onClick={() => setSelectedImage(null)}
+                className="absolute top-2 right-2 text-white hover:text-gray-300 transition-colors"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setSelectedImage(null);
+                }}
               >
                 <X size={24} />
               </button>

@@ -51,7 +51,7 @@ export default function Home() {
         </motion.div>
       </AnimatePresence>
       <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-        <div className="text-center">
+        <div className="text-center px-4">
           <AnimatePresence mode="wait">
             <motion.h1
               key={currentIndex}
@@ -59,16 +59,16 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
-              className={`text-4xl md:text-6xl font-bold mb-4 ${heroContent[currentIndex].color}`}
+              className={`text-3xl sm:text-4xl md:text-6xl font-bold mb-4 ${heroContent[currentIndex].color}`}
             >
               {heroContent[currentIndex].text}
             </motion.h1>
           </AnimatePresence>
-          <p className="text-white text-xl md:text-2xl mb-4">Experience the art of tattooing in Johannesburg</p>
-          <p className="text-white text-lg md:text-xl mb-8">Where creativity meets skin - your body, our canvas</p>
+          <p className="text-white text-lg sm:text-xl md:text-2xl mb-6">Experience the art of tattooing in Johannesburg</p>
+          <p className="text-white text-base sm:text-lg md:text-xl mb-8">Where creativity meets skin - your body, our canvas</p>
           <Link
             href="/contact"
-            className="bg-white text-black px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition-colors"
+            className="bg-white text-black px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition-colors inline-block"
           >
             Book Now
           </Link>

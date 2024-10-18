@@ -44,9 +44,9 @@ const services = [
 export default function Services() {
   return (
     <div className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold mb-4 text-center">Our Services</h1>
-      <p className="text-xl text-center mb-8">Explore our range of tattoo styles and services</p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-center">Our Services</h1>
+      <p className="text-lg sm:text-xl text-center mb-8">Explore our range of tattoo styles and services</p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((service, index) => (
           <motion.div
             key={index}
@@ -61,9 +61,9 @@ export default function Services() {
               style={{ backgroundImage: `url(${service.image})` }}
             />
             <div className="absolute inset-0 bg-black bg-opacity-50 transition-opacity hover:bg-opacity-75">
-              <div className="h-full flex flex-col justify-end p-6">
-                <h3 className="text-white text-2xl font-bold mb-2">{service.title}</h3>
-                <p className="text-gray-300 mb-2">{service.description}</p>
+              <div className="h-full flex flex-col justify-end p-4 sm:p-6">
+                <h3 className="text-white text-xl sm:text-2xl font-bold mb-2">{service.title}</h3>
+                <p className="text-gray-300 text-sm sm:text-base mb-2">{service.description}</p>
                 <p className="text-white font-semibold">{service.price}</p>
               </div>
             </div>
